@@ -4,7 +4,7 @@ var losses = 0;
 
 var newGame = function() {
     targetNumber = Math.floor(Math.random() * (120 - 19) + 19);
-    console.log(targetNumber);
+    // console.log(targetNumber);
     $("#bushelCount").text("Bushel Count: "+targetNumber);
     counter = 0;
     // $("#apples").empty();
@@ -12,25 +12,21 @@ var newGame = function() {
     apple2 = Math.floor(Math.random() * (12-1) + 1);
     apple3 = Math.floor(Math.random() * (12-1) + 1);
     apple4 = Math.floor(Math.random() * (12-1) + 1);
-    console.log(apple1, apple2, apple3, apple4);
-    // numberOptions = [apple1, apple2, apple3, apple4];
-    // for (var i = 0; i < numberOptions.length; i++) {
-    //     $(".apple-image"[i]).attr("data-applevalue",numberOptions[i])
-    // }
-    $(".apple-image0").attr("data-applevalue",apple1)
-    $(".apple-image1").attr("data-applevalue",apple2)
-    $(".apple-image2").attr("data-applevalue",apple3)
-    $(".apple-image3").attr("data-applevalue",apple4)
+    // console.log(apple1, apple2, apple3, apple4);
+
+    appleValue = [apple1, apple2, apple3, apple4];
+    $(".apple-image").on("click", function() {
+        appleValue = ($(this).attr("data-applevalue"));
+        appleValue = parseInt(appleValue)
+        appleValue;
+    });
 }
 // Step 1: create a target number of apples in bushel
 
 // the value of the targetNumber should be between 19 - 120 see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
 var targetNumber = Math.floor(Math.random() * (120-19)+19);
-// var newBushel = function() {
-//     targetNumber = Math.floor(Math.random() * (120-19)+19);
-// }
-console.log(targetNumber);
+// console.log(targetNumber);
 $("#bushelCount").text("Bushel Count: "+targetNumber)
 
 // Step 2: create random numbers for each apple (4 values)
@@ -38,7 +34,7 @@ var apple1 = Math.floor(Math.random() * (12-1) + 1);
 var apple2 = Math.floor(Math.random() * (12-1) + 1);
 var apple3 = Math.floor(Math.random() * (12-1) + 1);
 var apple4 = Math.floor(Math.random() * (12-1) + 1);
-console.log(apple1, apple2, apple3, apple4);
+// console.log(apple1, apple2, apple3, apple4);
 
 // Step 3: create multiple apples each with their own unique value
 var numberOptions = [apple1, apple2, apple3, apple4];
