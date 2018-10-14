@@ -1,3 +1,4 @@
+var targetNumber = "";
 var counter = 0;
 var wins = 0;
 var losses = 0;
@@ -12,14 +13,9 @@ var newGame = function() {
     apple2 = Math.floor(Math.random() * (12-1) + 1);
     apple3 = Math.floor(Math.random() * (12-1) + 1);
     apple4 = Math.floor(Math.random() * (12-1) + 1);
-    // console.log(apple1, apple2, apple3, apple4);
+    //console.log(apple1, apple2, apple3, apple4);
 
-    appleValue = [apple1, apple2, apple3, apple4];
-    $(".apple-image").on("click", function() {
-        appleValue = ($(this).attr("data-applevalue"));
-        appleValue = parseInt(appleValue)
-        appleValue;
-    });
+
 }
 // Step 1: create a target number of apples in bushel
 
