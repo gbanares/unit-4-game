@@ -1,4 +1,21 @@
 .apple-image {
-	width: 100px;
-	height: 100px;
+	width: 25%;
+	height: 25%;
+}
+footer {
+    text-align: center;
+    margin: 20px;
+}
+.container {
+    text-align: center;
+}
+#wins {
+    font-weight: bold;
+}
+#losses {
+    font-weight: bold;
+}
+#apples {
+	width: 80%;
+	margin: auto;
 }
