@@ -9,14 +9,14 @@ var apple4 = 0;
 
 var newGame = function() {
     targetNumber = Math.floor(Math.random() * (120 - 19) + 19);
-    // console.log(targetNumber);
+    console.log(targetNumber);
     $("#bushelCount").text("Bushel Count: "+targetNumber);
     counter = 0;
     apple1 = Math.floor(Math.random() * (12-1) + 1);
     apple2 = Math.floor(Math.random() * (12-1) + 1);
     apple3 = Math.floor(Math.random() * (12-1) + 1);
     apple4 = Math.floor(Math.random() * (12-1) + 1);
-    // console.log(apple1, apple2, apple3, apple4);
+    console.log(apple1, apple2, apple3, apple4);
     addApples();
     $(".apple-image").on("click", function () {
 
@@ -41,6 +41,21 @@ var newGame = function() {
     
     });
 }
+// Step 1: create a target number of apples in bushel
+
+// the value of the targetNumber should be between 19 - 120 see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
+// var targetNumber = Math.floor(Math.random() * (120-19)+19);
+// console.log(targetNumber);
+// $("#bushelCount").text("Bushel Count: "+targetNumber)
+
+// // Step 2: create random numbers for each apple (4 values)
+// var apple1 = Math.floor(Math.random() * (12-1) + 1);
+// var apple2 = Math.floor(Math.random() * (12-1) + 1);
+// var apple3 = Math.floor(Math.random() * (12-1) + 1);
+// var apple4 = Math.floor(Math.random() * (12-1) + 1);
+// console.log(apple1, apple2, apple3, apple4);
+
 
 
 function addApples() {
@@ -62,4 +77,31 @@ function addApples() {
     }
 }
 
+// addApples();
 newGame();
+
+// Step 5: click events for apples
+// $(".apple-image").on("click", function () {
+
+//     var appleValue = ($(this).attr("data-applevalue"));
+//     appleValue = parseInt(appleValue);
+//     // add the apple count to the counter (a global variable)
+//     counter += appleValue;
+//     $("#userApples").html("Number of Apples collected: " + counter);
+//     // alert("New score: " + counter);
+//     if (counter === targetNumber) {
+//         alert("You win!");
+//         wins++;
+//         newGame();
+//         $("#wins").html("Game Wins: " + wins);
+//     }
+//     else if (counter >= targetNumber) {
+//         alert("You lose!!");
+//         losses++;
+//         newGame();
+//         $("#losses").html("Game Losses: " + losses);
+//     }
+
+// });
+
+
